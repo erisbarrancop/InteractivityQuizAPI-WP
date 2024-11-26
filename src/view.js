@@ -10,9 +10,9 @@ const { state } = store( 'create-block', {
 		},
 	},
 	actions: {
-		buttonHandler: () => {
+		guessAttempt: () => {
 			const context = getContext();
-			context.clickCount++
+			console.log(context)
 		},
 		toggleOpen() {
 			const context = getContext();
