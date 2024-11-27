@@ -65,16 +65,14 @@ __webpack_require__.r(__webpack_exports__);
 const {
   state
 } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('create-block', {
-  state: {
-    get themeText() {
-      return state.isDark ? state.darkText : state.lightText;
-    }
-  },
+  state: {},
   actions: {
     guessAttempt: () => {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       if (!context.solved) {
         if (context.index === context.correctAnswer) {
+          state.solvedCount++;
+          console.log(state);
           context.showCongrats = true;
           setTimeout(() => {
             context.solved = true;

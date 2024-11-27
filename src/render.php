@@ -12,15 +12,7 @@
 
 
 // Adds the global state.
-wp_interactivity_state(
-	'create-block',
-	array(
-		'isDark' => false,
-		'darkText' => esc_html__('Switch to Light', 'interactivity-quiz'),
-		'lightText' => esc_html__('Switch to Dark', 'interactivity-quiz'),
-		'themeText' => esc_html__('Switch to Dark', 'interactivity-quiz'),
-	)
-);
+wp_interactivity_state('create-block', array('solvedCount' => 0, 'skyColor' => 'blue'));
 
 $answers = array();
 for ($i = 0; $i < count($attributes['answers']); $i++) {
